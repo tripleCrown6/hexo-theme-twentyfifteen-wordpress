@@ -7,9 +7,6 @@
         var ch = $("#content").height() // 内容高度
         $(window).scroll(function() {
             var sh = $(window).scrollTop() // 滚动条位置
-            console.log(sh)
-            console.log(bh)
-            console.log(h)
             if ( sh + bh > h && ch > h) {
                $sidebar.css("position", "fixed")
             } 
@@ -17,6 +14,12 @@
                $sidebar.css("position", "relative")
             }
         })
+
+        // 刷新后判断
+        var sh = $(window).scrollTop() // 滚动条位置
+        if ( sh + bh > h && ch > h) {
+            $sidebar.css("position", "fixed")
+        }
 
     })
 </script>
