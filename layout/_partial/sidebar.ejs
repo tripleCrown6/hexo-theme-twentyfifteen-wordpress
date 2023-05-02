@@ -1,11 +1,10 @@
 <header id="header" class="site-header">
 	<div class="site-branding">
-		<h1 class="site-title">
+		<span class="site-title">
 			<% if(theme.site_avatar) { %>
 				<a href="<%- url_for(theme.site_avatar) %>" class="avatar-circle"><img src="<%- url_for(theme.site_avatar) %>" /></a>
 			<% }%>
-			<a href="<%- url_for(config.root) %>" rel="home"><%= theme.site_title %></a></h1>
-		<p class="site-description"><%= theme.site_description %></p>
+			<a href="<%- url_for(config.root) %>" rel="home"><%= theme.site_title %></a></span>
 		<button class="secondary-toggle font-asesome-icon">Menu and widgets</button>
 	</div>
 </header>
@@ -17,6 +16,12 @@
 						<% } %>
                          </ul>
     </nav>
+	<!-- 补充 -->
+	<aside class="widget">
+		<h3 class="widget-title">愿景</h3>		
+		<p class="site-description"><%= theme.site_description %></p>
+	</aside>
+
 	<% theme.widgets.forEach(function(widget){ %>
 		<%- partial('../_widget/' + widget) %>
 	<% }); %>
