@@ -941,7 +941,8 @@ a:focus {
 }
 
 .site-main {
-    padding: 8.3333% 0;
+    /* padding: 8.3333% 0; */
+    padding: 0;
 }
 
 .site-footer {
@@ -1077,7 +1078,8 @@ body:before {
 }
 
 .site-main {
-    padding: 8.3333% 0;
+    /* padding: 8.3333% 0; */
+    padding: 0;
 }
 
 /*page*/
